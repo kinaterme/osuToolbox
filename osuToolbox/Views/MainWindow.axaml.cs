@@ -159,6 +159,52 @@ public partial class MainWindow : Window
         else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
             Console.WriteLine("Running on macOS");
+            if (Directory.Exists("/Applications/MissAnalyzer.app")) {
+                Console.WriteLine("missanalyzer installed");
+                Process.Start("/Applications/MissAnalyzer.app/Contents/MacOS/OsuMissAnalyzer");
+            }
+            else
+            {
+                Console.WriteLine("missanalyzer is not installed");
+                string downloadUrl = "https://raw.githubusercontent.com/kinaterme/osuToolbox/main/bins/MacOS/MissAnalyzer.zip";
+                string destinationPath = "/Applications/MissAnalyzer.zip";
+
+                // Download the file using HttpClient synchronously
+                using (HttpClient httpClient = new HttpClient())
+                {
+                    HttpResponseMessage response = httpClient.GetAsync(downloadUrl).GetAwaiter().GetResult();
+                    response.EnsureSuccessStatusCode();
+                    byte[] fileBytes = response.Content.ReadAsByteArrayAsync().GetAwaiter().GetResult();
+                    File.WriteAllBytes(destinationPath, fileBytes);
+                }
+                        // Command to execute
+                string command = "unzip /Applications/MissAnalyzer.zip -d /Applications"; // replace with the macOS command you want to run
+
+                // Create a new process to run the command
+                Process process = new Process();
+
+                // Set process information
+                process.StartInfo.FileName = "/bin/bash"; // Bash shell on macOS
+                process.StartInfo.Arguments = $"-c \"{command}\""; // -c to pass the command
+                process.StartInfo.RedirectStandardOutput = true; // Capture output
+                process.StartInfo.RedirectStandardError = true;  // Capture errors
+                process.StartInfo.UseShellExecute = false; // Don't use the shell to execute the process
+                process.StartInfo.CreateNoWindow = true; // Do not create a command prompt window
+                
+                // Start the process
+                process.Start();
+
+                // Read the output
+                string output = process.StandardOutput.ReadToEnd();
+                string errors = process.StandardError.ReadToEnd();
+
+                process.WaitForExit(); // Wait for the process to finish
+                string command_delete = "rm -f /Applications/MissAnalyzer.zip"; // replace with the macOS command you want to run
+                process.StartInfo.Arguments = $"-c \"{command_delete}\""; // -c to pass the command
+                process.Start();
+                process.WaitForExit();
+                Process.Start("/Applications/MissAnalyzer.app/Contents/MacOS/OsuMissAnalyzer");
+            }
         }
         else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
         {
