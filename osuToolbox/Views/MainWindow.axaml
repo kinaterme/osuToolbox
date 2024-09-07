@@ -1,0 +1,106 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:osuToolbox.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:osuToolbox.Views"
+        xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
+        mc:Ignorable="d"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        x:Class="osuToolbox.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="osuToolbox">
+    <StackPanel>
+        <TabControl Margin="5">
+            <TabItem Header="Replays">
+                <Grid Height="100" ColumnDefinitions="Auto, auto, auto">
+                    <Button Grid.Column="0" Click="RewindClickHandler">
+                        <Button.Content>
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/b80ahrU.png"/>
+                                <TextBlock Text="Rewind"/>
+                            </StackPanel>        
+                        </Button.Content>
+                    </Button>
+                    <Button Grid.Column="1" Click="CircleguardClickHandler" ToolTip.Tip="NOTE: Linux version might be a few versions behind.">
+                        <Button.Content>
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/iH1zvtk.png"/>
+                                <TextBlock Text="Circleguard"/>
+                            </StackPanel>        
+                        </Button.Content>
+                    </Button>
+                    <Button Grid.Column="2" Click="MissAnalyzerClickHandler" ToolTip.Tip="NOTE: MacOS version is not yet available.">
+                        <Button.Content>
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/00d04GA.png"/>
+                                <TextBlock Text="MissAnalyzer"/>
+                            </StackPanel>        
+                        </Button.Content>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Utilities">
+                <Grid Height="100" ColumnDefinitions="Auto, auto, auto">
+                    <Button Grid.Column="0" ToolTip.Tip="NOTE: MacOS version is not yet available.">
+                        <Button.Content>
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/9bLp4MS.png"/>
+                                <TextBlock Text="Anti Mindblock"/>
+                            </StackPanel>        
+                        </Button.Content>
+                    </Button>
+                    <Button Grid.Column="1" ToolTip.Tip="NOTE: MacOS version is not yet available.">
+                        <Button.Content>
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/clXd5io.png"/>
+                                <TextBlock Text="osu! trainer"/>
+                            </StackPanel>        
+                        </Button.Content>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Streaming">
+                <Grid Height="100" ColumnDefinitions="Auto, auto, auto">
+                    <Button Grid.Column="0" ToolTip.Tip="NOTE: MacOS version is not available.">
+                        <Button.Content>
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/U0QL13p.png"/>
+                                <TextBlock Text="StreamCompanion"/>
+                            </StackPanel>        
+                        </Button.Content>
+                    </Button>
+                    <Button Grid.Column="1" ToolTip.Tip="Linux version of StreamCompanion">
+                        <Button.Content>
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/lQVDokm.png"/>
+                                <TextBlock Text="gosumemory"/>
+                            </StackPanel>        
+                        </Button.Content>
+                    </Button>
+                    <Button Grid.Column="2" ToolTip.Tip="NOTE: If you're using a tiling window manager on Linux, you might want to set an exception to make the window float at all times." Click="KeyOverlayClickHandler">
+                        <Button.Content>
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/wrD3kdn.png"/>
+                                <TextBlock Text="KeyOverlay"/>
+                            </StackPanel>        
+                        </Button.Content>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Input">
+                <Grid Height="100" ColumnDefinitions="Auto, auto, auto">
+                    <Button Grid.Column="0" Click="OpenTabletDriverClickHandler">
+                        <Button.Content>
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/9bLp4MS.png"/>
+                                <TextBlock Text="OpenTabletDriver"/>
+                            </StackPanel>        
+                        </Button.Content>
+                    </Button>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </StackPanel>
+</Window>
