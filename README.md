@@ -8,15 +8,19 @@ This is still in VERY early development, and is not yet usable.
 ![Screenshot 2024-09-07 at 11 21 20 PM](https://github.com/user-attachments/assets/22f45eef-b3ee-4ce3-81aa-1242dc6c1a49)
 
 # What works
-MacOS: Rewind<br/>
-       Circleguard<br/>
-       MissAnalyzer (have to extract maps in folders)<br/>
-       KeyOverlay<br/>
-       OpenTabletDriver<br/>
+MacOS: 
+* Rewind
+* Circleguard
+* MissAnalyzer (have to extract maps in folders)
+* KeyOverlay
+* OpenTabletDriver
 
 # What doesn't work
 Windows: Everything<br/>
-MacOS: StreamCompanion/gosumemory<br/>
-       Anti Mindblock<br/>
-       osu! trainer<br/>
-Linux: Everything<br/>
+
+MacOS: 
+* StreamCompanion/gosumemory
+* Anti Mindblock
+* osu! trainer<br/>
+
+Linux: Everything
