@@ -38,7 +38,6 @@ public partial class MainWindow : Window
                 string downloadUrl = "https://github.com/abstrakt8/rewind/releases/download/v0.2.0/Rewind-0.2.0-mac.zip";
                 string destinationPath = "/Applications/Rewind.zip";
 
-                // Download the file using HttpClient synchronously
                 using (HttpClient httpClient = new HttpClient())
                 {
                     HttpResponseMessage response = httpClient.GetAsync(downloadUrl).GetAwaiter().GetResult();
@@ -46,30 +45,25 @@ public partial class MainWindow : Window
                     byte[] fileBytes = response.Content.ReadAsByteArrayAsync().GetAwaiter().GetResult();
                     File.WriteAllBytes(destinationPath, fileBytes);
                 }
-                        // Command to execute
-                string command = "unzip /Applications/Rewind.zip -d /Applications"; // replace with the macOS command you want to run
+                string command = "unzip /Applications/Rewind.zip -d /Applications";
 
-                // Create a new process to run the command
                 Process process = new Process();
 
-                // Set process information
-                process.StartInfo.FileName = "/bin/bash"; // Bash shell on macOS
-                process.StartInfo.Arguments = $"-c \"{command}\""; // -c to pass the command
-                process.StartInfo.RedirectStandardOutput = true; // Capture output
-                process.StartInfo.RedirectStandardError = true;  // Capture errors
-                process.StartInfo.UseShellExecute = false; // Don't use the shell to execute the process
-                process.StartInfo.CreateNoWindow = true; // Do not create a command prompt window
+                process.StartInfo.FileName = "/bin/bash";
+                process.StartInfo.Arguments = $"-c \"{command}\"";
+                process.StartInfo.RedirectStandardOutput = true;
+                process.StartInfo.RedirectStandardError = true;
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.CreateNoWindow = true;
                 
-                // Start the process
                 process.Start();
 
-                // Read the output
                 string output = process.StandardOutput.ReadToEnd();
                 string errors = process.StandardError.ReadToEnd();
 
-                process.WaitForExit(); // Wait for the process to finish
-                string command_delete = "rm -f /Applications/Rewind.zip"; // replace with the macOS command you want to run
-                process.StartInfo.Arguments = $"-c \"{command_delete}\""; // -c to pass the command
+                process.WaitForExit();
+                string command_delete = "rm -f /Applications/Rewind.zip";
+                process.StartInfo.Arguments = $"-c \"{command_delete}\"";
                 process.Start();
                 process.WaitForExit();
                 Process.Start("/Applications/Rewind.app/Contents/MacOS/Rewind");
@@ -105,7 +99,6 @@ public partial class MainWindow : Window
                 string downloadUrl = "https://github.com/circleguard/circleguard/releases/download/v2.15.6/Circleguard_osx.app.zip";
                 string destinationPath = "/Applications/Circleguard.zip";
 
-                // Download the file using HttpClient synchronously
                 using (HttpClient httpClient = new HttpClient())
                 {
                     HttpResponseMessage response = httpClient.GetAsync(downloadUrl).GetAwaiter().GetResult();
@@ -113,29 +106,25 @@ public partial class MainWindow : Window
                     byte[] fileBytes = response.Content.ReadAsByteArrayAsync().GetAwaiter().GetResult();
                     File.WriteAllBytes(destinationPath, fileBytes);
                 }
-                string command = "unzip /Applications/Circleguard.zip -d /Applications"; // replace with the macOS command you want to run
+                string command = "unzip /Applications/Circleguard.zip -d /Applications";
 
-                // Create a new process to run the command
                 Process process = new Process();
                 
-                // Set process information
-                process.StartInfo.FileName = "/bin/bash"; // Bash shell on macOS
-                process.StartInfo.Arguments = $"-c \"{command}\""; // -c to pass the command
-                process.StartInfo.RedirectStandardOutput = true; // Capture output
-                process.StartInfo.RedirectStandardError = true;  // Capture errors
-                process.StartInfo.UseShellExecute = false; // Don't use the shell to execute the process
-                process.StartInfo.CreateNoWindow = true; // Do not create a command prompt window
+                process.StartInfo.FileName = "/bin/bash";
+                process.StartInfo.Arguments = $"-c \"{command}\"";
+                process.StartInfo.RedirectStandardOutput = true;
+                process.StartInfo.RedirectStandardError = true;
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.CreateNoWindow = true;
                 
-                // Start the process
                 process.Start();
 
-                // Read the output
                 string output = process.StandardOutput.ReadToEnd();
                 string errors = process.StandardError.ReadToEnd();
 
-                process.WaitForExit(); // Wait for the process to finish
-                string command_delete = "rm -f /Applications/Circleguard.zip"; // replace with the macOS command you want to run
-                process.StartInfo.Arguments = $"-c \"{command_delete}\""; // -c to pass the command
+                process.WaitForExit();
+                string command_delete = "rm -f /Applications/Circleguard.zip";
+                process.StartInfo.Arguments = $"-c \"{command_delete}\"";
                 process.Start();
                 process.WaitForExit();
                 Process.Start("/Applications/Circleguard.app/Contents/MacOS/Circleguard");
@@ -169,7 +158,6 @@ public partial class MainWindow : Window
                 string downloadUrl = "https://raw.githubusercontent.com/kinaterme/osuToolbox/main/bins/MacOS/MissAnalyzer.zip";
                 string destinationPath = "/Applications/MissAnalyzer.zip";
 
-                // Download the file using HttpClient synchronously
                 using (HttpClient httpClient = new HttpClient())
                 {
                     HttpResponseMessage response = httpClient.GetAsync(downloadUrl).GetAwaiter().GetResult();
@@ -177,30 +165,25 @@ public partial class MainWindow : Window
                     byte[] fileBytes = response.Content.ReadAsByteArrayAsync().GetAwaiter().GetResult();
                     File.WriteAllBytes(destinationPath, fileBytes);
                 }
-                        // Command to execute
-                string command = "unzip /Applications/MissAnalyzer.zip -d /Applications"; // replace with the macOS command you want to run
+                string command = "unzip /Applications/MissAnalyzer.zip -d /Applications";
 
-                // Create a new process to run the command
                 Process process = new Process();
 
-                // Set process information
-                process.StartInfo.FileName = "/bin/bash"; // Bash shell on macOS
-                process.StartInfo.Arguments = $"-c \"{command}\""; // -c to pass the command
-                process.StartInfo.RedirectStandardOutput = true; // Capture output
-                process.StartInfo.RedirectStandardError = true;  // Capture errors
-                process.StartInfo.UseShellExecute = false; // Don't use the shell to execute the process
-                process.StartInfo.CreateNoWindow = true; // Do not create a command prompt window
+                process.StartInfo.FileName = "/bin/bash";
+                process.StartInfo.Arguments = $"-c \"{command}\"";
+                process.StartInfo.RedirectStandardOutput = true;
+                process.StartInfo.RedirectStandardError = true;
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.CreateNoWindow = true;
                 
-                // Start the process
                 process.Start();
 
-                // Read the output
                 string output = process.StandardOutput.ReadToEnd();
                 string errors = process.StandardError.ReadToEnd();
 
-                process.WaitForExit(); // Wait for the process to finish
-                string command_delete = "rm -f /Applications/MissAnalyzer.zip"; // replace with the macOS command you want to run
-                process.StartInfo.Arguments = $"-c \"{command_delete}\""; // -c to pass the command
+                process.WaitForExit();
+                string command_delete = "rm -f /Applications/MissAnalyzer.zip";
+                process.StartInfo.Arguments = $"-c \"{command_delete}\"";
                 process.Start();
                 process.WaitForExit();
                 Process.Start("/Applications/MissAnalyzer.app/Contents/MacOS/OsuMissAnalyzer");
@@ -243,7 +226,6 @@ public partial class MainWindow : Window
                 Console.WriteLine("keyoverlay is not installed");
                 string downloadUrl = "https://github.com/Blondazz/KeyOverlay/releases/download/v1.0.6/KeyOverlay-macos-latest.zip";
 
-                // Download the file using HttpClient synchronously
                 using (HttpClient httpClient = new HttpClient())
                 {
                     HttpResponseMessage response = httpClient.GetAsync(downloadUrl).GetAwaiter().GetResult();
@@ -253,23 +235,20 @@ public partial class MainWindow : Window
                 }
                 string unzipCommand = $"unzip -q -o {zipFilePath} -d {homeDirectory}/osutoolbox";
 
-                // Create a new process to run the command
                 Process process = new Process();
                 
-                // Set process information
-                process.StartInfo.FileName = "/bin/bash"; // Bash shell on macOS
-                process.StartInfo.Arguments = $"-c \"{unzipCommand}\""; // -c to pass the command
-                process.StartInfo.RedirectStandardOutput = false; // Capture output
-                process.StartInfo.RedirectStandardError = false;  // Capture errors
-                process.StartInfo.UseShellExecute = false; // Don't use the shell to execute the process
-                process.StartInfo.CreateNoWindow = true; // Do not create a command prompt window
+                process.StartInfo.FileName = "/bin/bash";
+                process.StartInfo.Arguments = $"-c \"{unzipCommand}\"";
+                process.StartInfo.RedirectStandardOutput = false;
+                process.StartInfo.RedirectStandardError = false;
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.CreateNoWindow = true;
                 
-                // Start the process
                 process.Start();
 
-                process.WaitForExit(); // Wait for the process to finish
-                string command_delete = $"rm -f {zipFilePath}"; // replace with the macOS command you want to run
-                process.StartInfo.Arguments = $"-c \"{command_delete}\""; // -c to pass the command
+                process.WaitForExit();
+                string command_delete = $"rm -f {zipFilePath}";
+                process.StartInfo.Arguments = $"-c \"{command_delete}\"";
                 process.Start();
                 process.WaitForExit();
                 string keyOverlayExecutable = Path.Combine(keyOverlayPath, "KeyOverlay");
@@ -308,7 +287,6 @@ public partial class MainWindow : Window
                 string downloadUrl = "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.osx-x64.tar.gz";
                 string destinationPath = "/Applications/OpenTabletDriver.tar.gz";
 
-                // Download the file using HttpClient synchronously
                 using (HttpClient httpClient = new HttpClient())
                 {
                     HttpResponseMessage response = httpClient.GetAsync(downloadUrl).GetAwaiter().GetResult();
@@ -316,25 +294,22 @@ public partial class MainWindow : Window
                     byte[] fileBytes = response.Content.ReadAsByteArrayAsync().GetAwaiter().GetResult();
                     File.WriteAllBytes(destinationPath, fileBytes);
                 }
-                string command = "tar xf /Applications/OpenTabletDriver.tar.gz -C /Applications"; // replace with the macOS command you want to run
+                string command = "tar xf /Applications/OpenTabletDriver.tar.gz -C /Applications";
 
-                // Create a new process to run the command
                 Process process = new Process();
                 
-                // Set process information
-                process.StartInfo.FileName = "/bin/bash"; // Bash shell on macOS
-                process.StartInfo.Arguments = $"-c \"{command}\""; // -c to pass the command
-                process.StartInfo.RedirectStandardOutput = false; // Capture output
-                process.StartInfo.RedirectStandardError = false;  // Capture errors
-                process.StartInfo.UseShellExecute = false; // Don't use the shell to execute the process
-                process.StartInfo.CreateNoWindow = true; // Do not create a command prompt window
+                process.StartInfo.FileName = "/bin/bash";
+                process.StartInfo.Arguments = $"-c \"{command}\"";
+                process.StartInfo.RedirectStandardOutput = false;
+                process.StartInfo.RedirectStandardError = false;
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.CreateNoWindow = true;
                 
-                // Start the process
                 process.Start();
 
-                process.WaitForExit(); // Wait for the process to finish
-                string command_delete = "rm -f /Applications/OpenTabletDriver.tar.gz"; // replace with the macOS command you want to run
-                process.StartInfo.Arguments = $"-c \"{command_delete}\""; // -c to pass the command
+                process.WaitForExit();
+                string command_delete = "rm -f /Applications/OpenTabletDriver.tar.gz";
+                process.StartInfo.Arguments = $"-c \"{command_delete}\"";
                 process.Start();
                 process.WaitForExit();
                 Process.Start("/Applications/OpenTabletDriver.app/Contents/MacOS/OpenTabletDriver.UX.MacOS");
