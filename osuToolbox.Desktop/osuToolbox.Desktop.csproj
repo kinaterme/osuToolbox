@@ -1,10 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>  <!-- Must be 'Exe' to generate a binary -->
-    <TargetFramework>net8.0</TargetFramework> <!-- Use your actual target framework -->
-    <RuntimeIdentifier>osx-x64</RuntimeIdentifier>  <!-- Target the correct macOS architecture -->
-    <SelfContained>true</SelfContained>  <!-- Make the app self-contained -->
-    <PublishSingleFile>true</PublishSingleFile>  <!-- Bundle into a single binary -->
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -14,7 +13,6 @@
   <ItemGroup>
     <PackageReference Include="AsyncImageLoader.Avalonia" Version="3.3.0" />
     <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
-    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
     <PackageReference Include="MessageBox.Avalonia" Version="3.1.6" />
   </ItemGroup>
