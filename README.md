@@ -7,6 +7,9 @@ This is still in VERY early development, and is missing most of the tools.
 
 ![toolbox](https://github.com/user-attachments/assets/a1f09e73-ec7f-4045-8475-51f04331817e)
 
+* [How to build](https://github.com/kinaterme/osuToolbox?tab=readme-ov-file#how-to-build)
+* [MissAnalyzer on macOS](https://github.com/kinaterme/osuToolbox?tab=readme-ov-file#how-to-build)
+
 ## What works
 MacOS: 
 
@@ -90,3 +93,11 @@ cd bin/Release/net8.0/linux-x64/publish
 ./osuToolbox.Desktop
 ```
 
+## How to use MissAnalyzer on macOS
+1. Unzip a map (.osz) into a folder
+2. Get your replay file (.osr)
+3. Launch MissAnalyzer through the toolbox
+4. Load replay file
+5. Load .osu file inside the map's folder (you have to match the difficulty of the map and the replay)
+
+![missanalyzer](https://github.com/user-attachments/assets/7e11716e-fab8-499f-8bfa-e3eed258461a)
