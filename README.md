@@ -3,6 +3,8 @@ A toolbox containing popular tools used for osu!.
 This toolbox was made for seamless setup of the tools on Linux and Mac, as some tools aren't built for them.
 You can still use this toolbox on Windows, though.
 
+### NOTE: No support for Windows and Linux yet
+
 This is still in VERY early development, and is missing most of the tools.
 
 ![toolbox](https://github.com/user-attachments/assets/a1f09e73-ec7f-4045-8475-51f04331817e)
