@@ -5,10 +5,11 @@ You can still use this toolbox on Windows, though.
 
 This is still in VERY early development, and is missing most of the tools.
 
-![Screenshot 2024-09-07 at 11 21 20 PM](https://github.com/user-attachments/assets/22f45eef-b3ee-4ce3-81aa-1242dc6c1a49)
+![toolbox](https://github.com/user-attachments/assets/a1f09e73-ec7f-4045-8475-51f04331817e)
 
 ## What works
 MacOS: 
+
 * Rewind
 * Circleguard
 * MissAnalyzer (have to extract maps in folders)
@@ -21,6 +22,7 @@ Windows: Everything<br/>
 MacOS: 
 * StreamCompanion/gosumemory
 * Anti Mindblock
+* Danser
 * osu! trainer<br/>
 
 Linux: Everything
