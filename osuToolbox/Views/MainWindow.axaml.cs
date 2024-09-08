@@ -349,4 +349,22 @@ public partial class MainWindow : Window
             Console.WriteLine("Unknown Operating System");
         }
     }
+    public void DanserClickHandler(object sender, RoutedEventArgs args) {
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) 
+        {
+            Console.WriteLine("Running on Windows");
+        }
+        else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) 
+        {
+            Console.WriteLine("Running on MacOS");
+        }
+        else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)) 
+        {
+            Console.WriteLine("Running on Linux");
+        }
+        else 
+        {
+            Console.WriteLine("Unknown operating system");
+        }
+    }
 }

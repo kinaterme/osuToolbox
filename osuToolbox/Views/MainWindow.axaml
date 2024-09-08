@@ -14,7 +14,7 @@
     <StackPanel>
         <TabControl Margin="5">
             <TabItem Header="Replays">
-                <Grid Height="100" ColumnDefinitions="Auto, auto, auto">
+                <Grid Height="100" ColumnDefinitions="Auto, auto, auto, auto">
                     <Button Grid.Column="0" Click="RewindClickHandler">
                         <Button.Content>
                             <StackPanel Orientation="Vertical">
@@ -31,7 +31,7 @@
                             </StackPanel>        
                         </Button.Content>
                     </Button>
-                    <Button Grid.Column="2" Click="MissAnalyzerClickHandler" ToolTip.Tip="NOTE: MacOS version is not yet available.">
+                    <Button Grid.Column="2" Click="MissAnalyzerClickHandler">
                         <Button.Content>
                             <StackPanel Orientation="Vertical">
                                 <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/00d04GA.png"/>
@@ -39,19 +39,27 @@
                             </StackPanel>        
                         </Button.Content>
                     </Button>
+                    <Button Grid.Column="3" ToolTip.Tip="NOTE: MacOS version is unavailable" Click="DanserClickHandler">
+                        <Button.Content>
+                            <StackPanel Orientation="Vertical">
+                                <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/tVXqFdj.png"/>
+                                <TextBlock Text="Danser"/>
+                            </StackPanel>        
+                        </Button.Content>
+                    </Button>
                 </Grid>
             </TabItem>
             <TabItem Header="Utilities">
                 <Grid Height="100" ColumnDefinitions="Auto, auto, auto">
-                    <Button Grid.Column="0" ToolTip.Tip="NOTE: MacOS version is not yet available.">
+                    <Button Grid.Column="0" ToolTip.Tip="NOTE: MacOS version unavailable.">
                         <Button.Content>
                             <StackPanel Orientation="Vertical">
-                                <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/9bLp4MS.png"/>
+                                <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/f3LipVI.png"/>
                                 <TextBlock Text="Anti Mindblock"/>
                             </StackPanel>        
                         </Button.Content>
                     </Button>
-                    <Button Grid.Column="1" ToolTip.Tip="NOTE: MacOS version is not yet available.">
+                    <Button Grid.Column="1" ToolTip.Tip="NOTE: MacOS version is unavailable.">
                         <Button.Content>
                             <StackPanel Orientation="Vertical">
                                 <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/clXd5io.png"/>
@@ -63,7 +71,7 @@
             </TabItem>
             <TabItem Header="Streaming">
                 <Grid Height="100" ColumnDefinitions="Auto, auto, auto">
-                    <Button Grid.Column="0" ToolTip.Tip="NOTE: MacOS version is not available.">
+                    <Button Grid.Column="0" ToolTip.Tip="NOTE: MacOS version unavailable.">
                         <Button.Content>
                             <StackPanel Orientation="Vertical">
                                 <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/U0QL13p.png"/>
