@@ -8,7 +8,7 @@ This is still in VERY early development, and is missing most of the tools.
 ![toolbox](https://github.com/user-attachments/assets/a1f09e73-ec7f-4045-8475-51f04331817e)
 
 * [How to build](https://github.com/kinaterme/osuToolbox?tab=readme-ov-file#how-to-build)
-* [MissAnalyzer on macOS](https://github.com/kinaterme/osuToolbox?tab=readme-ov-file#how-to-build)
+* [MissAnalyzer on macOS]([https://github.com/kinaterme/osuToolbox?tab=readme-ov-file#how-to-build](https://github.com/kinaterme/osuToolbox?tab=readme-ov-file#how-to-use-missanalyzer-on-macos))
 
 ## What works
 MacOS: 
