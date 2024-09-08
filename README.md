@@ -28,7 +28,7 @@ Linux: Everything
 ## How to build
 ### Windows:<br/>
 
-1. Download .NET 8 https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+1. Install .NET 8 https://dotnet.microsoft.com/en-us/download/dotnet/8.0
   
 2. Build the toolbox
 ```
@@ -43,7 +43,7 @@ explorer .
 
 ### macOS (Apple Silicon):<br/>
 
-1. Download .NET 8 https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+1. Install .NET 8 https://dotnet.microsoft.com/en-us/download/dotnet/8.0
 
 2. Build the toolbox and run it
 ```
