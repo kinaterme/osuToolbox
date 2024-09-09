@@ -51,7 +51,7 @@
             </TabItem>
             <TabItem Header="Utilities">
                 <Grid Height="100" ColumnDefinitions="Auto, auto, auto">
-                    <Button Grid.Column="0" ToolTip.Tip="NOTE: MacOS version unavailable.">
+                    <Button Grid.Column="0" ToolTip.Tip="NOTE: MacOS version unavailable." Click="AntiMindblockClickHandler">
                         <Button.Content>
                             <StackPanel Orientation="Vertical">
                                 <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/f3LipVI.png"/>
@@ -59,7 +59,7 @@
                             </StackPanel>        
                         </Button.Content>
                     </Button>
-                    <Button Grid.Column="1" ToolTip.Tip="NOTE: MacOS version is unavailable.">
+                    <Button Grid.Column="1" ToolTip.Tip="NOTE: MacOS version is unavailable." Click="OsuTrainerClickHandler">
                         <Button.Content>
                             <StackPanel Orientation="Vertical">
                                 <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/clXd5io.png"/>
@@ -79,7 +79,7 @@
                             </StackPanel>        
                         </Button.Content>
                     </Button>
-                    <Button Grid.Column="1" ToolTip.Tip="Linux version of StreamCompanion">
+                    <Button Grid.Column="1" ToolTip.Tip="Linux version of StreamCompanion" Click="GosumemoryClickHandler">
                         <Button.Content>
                             <StackPanel Orientation="Vertical">
                                 <Image Width="60" Height="60" asyncImageLoader:ImageLoader.Source="https://i.imgur.com/lQVDokm.png"/>
