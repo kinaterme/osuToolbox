@@ -3,7 +3,7 @@ A toolbox containing popular tools used for osu!.
 This toolbox was made for seamless setup of the tools on Linux and Mac, as some tools aren't built for them.
 You can still use this toolbox on Windows, though.
 
-### NOTE: No support for Windows and Linux yet
+### NOTE: No support for Windows yet
 
 This is still in VERY early development, and is missing most of the tools.
 
@@ -21,6 +21,16 @@ MacOS:
 * KeyOverlay
 * OpenTabletDriver
 
+Linux:
+
+* Rewind
+* MissAnalyzer
+* Danser
+* KeyOverlay
+* Anti Mindblock
+* osu! trainer
+* gosumemory
+
 ## What doesn't work
 Windows: Everything<br/>
 
@@ -30,7 +40,9 @@ MacOS:
 * Danser
 * osu! trainer<br/>
 
-Linux: Everything
+Linux: 
+* Circleguard
+* OpenTabletDriver (have to install it yourself for now)
 
 ## How to build
 ### Windows:<br/>
@@ -100,6 +112,6 @@ cd bin/Release/net8.0/linux-x64/publish
 2. Get your replay file (.osr)
 3. Launch MissAnalyzer through the toolbox
 4. Load replay file
-5. Load .osu file inside the map's folder (you have to match the difficulty of the map and the replay)
+5. Load .osu file inside the map's folder (you have to match the difficulty of the map with the one in the replay)
 
 ![missanalyzer](https://github.com/user-attachments/assets/7e11716e-fab8-499f-8bfa-e3eed258461a)

@@ -365,7 +365,7 @@ public partial class MainWindow : Window
             Console.WriteLine("Running on Linux");
             if (Directory.Exists(KeyOverlayPath))
             {
-                Console.WriteLine("missanalyzer installed");
+                Console.WriteLine("keyoverlay installed");
                 string KeyOverlayExecutable = Path.Combine(KeyOverlayPath, "KeyOverlay");
                 Process.Start(new ProcessStartInfo
                 {
@@ -377,7 +377,7 @@ public partial class MainWindow : Window
             {
                 Console.WriteLine("KeyOverlay is not installed");
                 Directory.CreateDirectory(KeyOverlayPath);
-                string downloadUrl = "https://github.com/Blondazz/KeyOverlay/releases/download/v1.0.6/KeyOverlay-ubuntu-latest.zip";
+                string downloadUrl = "https://github.com/kinaterme/osuToolbox/raw/main/bins/Linux/KeyOverlay.zip";
 
                 using (HttpClient httpClient = new HttpClient())
                 {
@@ -790,7 +790,7 @@ public partial class MainWindow : Window
         }
         else 
         {
-
+            Console.WriteLine("Unknown operating system");
         }
     }
 }
